@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Comfortaa:wght@300&family=Montserrat:wght@500&family=Assistant:wght@300;500&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Assistant', sans-serif;
+}
+
+h2 {
+  font-size: medium;
+}
+
+.row {
+  display: flex;
+  margin-left: 8em;
+  margin-right: 8em;
+  line-height: 1.6;
+  padding-top: 3em;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  flex: 0 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.sticky {
+  display: flex;
+  padding-left: 4em;
+  padding-top: 0.75em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+  color: rgb(131, 131, 131);
+  font-family: 'New Tegomin', serif;
+}
+
+li a.active {
+  color: rgb(0, 0, 0);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 16vh;
+  font-family: 'Comfortaa', cursive;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #475569;
+}
+
+img {
+  height: 600px;
+}
+
+i {
+  padding-left: 7em;
+}
+
+.contact {
+  padding-left: 8em;
+}
+
+@media only screen and (max-width: 600px) {
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    width: 100vw;
+    margin-top: -5px;
+  }
+
+  img {
+    width: 100vw;
+    height: auto;
+  }
+
+  nav {
+    padding-left: 16px;
+  }
+
+  .sticky {
+    padding-left: 16px;
+  }
+
+  .nav-menu {
+    position: absolute;
+    left: -120%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 0em;
+    margin-right: 0em;
+    line-height: 1.6;
+    padding-top: 3em;
+    width: 100vw;
+  }
+
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 100%;
+    padding: 0px;
+  }
+
+  .column p {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .column h2 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  i {
+    padding-left: 16px;
+  }
+}
